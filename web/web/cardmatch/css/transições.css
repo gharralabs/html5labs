@@ -1,0 +1,41 @@
+﻿
+body {
+
+    background: lightgray;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    margin: 20px;
+    position: absolute;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.cardAK {
+    background-image: url('../imagens/AK.png');
+}
+
+.cardAQ {
+    background-image: url('../imagens/AQ.png');
+}
+
+
+.rotacionar-direita {
+    -moz-transform: rotate3d(0, 0, 1, 90deg);
+    -ms-transform: rotate3d(0, 0, 1, 90deg);
+    -o-transform: rotate3d(0, 0, 1, 90deg);
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+}
+
+.mover-e-escalar {
+    -moz-transform: translate3d(150px, 150px, 0) scale3d(1.5, 1.5, 1);
+    -ms-transform: translate3d(150px, 150px, 0) scale3d(1.5, 1.5, 1);
+    -o-transform: translate3d(150px, 150px, 0) scale3d(1.5, 1.5, 1);
+    -webkit-transform: translate3d(150px, 150px, 0) scale3d(1.5, 1.5, 1);
+    transform: translate3d(150px, 150px, 0) scale3d(1.5, 1.5, 1);
+}

@@ -66,6 +66,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="box.html" />
+    <Content Include="cardmatch\css\transições.css" />
+    <Content Include="cardmatch\imagens\AK.png" />
+    <Content Include="cardmatch\imagens\AQ.png" />
+    <Content Include="cardmatch\imagens\bg.jpg" />
+    <Content Include="cardmatch\imagens\deck.png" />
+    <Content Include="cardmatch\imagens\table.jpg" />
+    <Content Include="cardmatch\index.html" />
+    <Content Include="cardmatch\js\index.js" />
     <Content Include="pingpong\img\football-player-hand.png" />
     <Content Include="pingpong\img\football-player-left.png" />
     <Content Include="pingpong\img\football-player.png" />
@@ -83,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
