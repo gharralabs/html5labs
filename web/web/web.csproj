@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="box.html" />
+    <Content Include="cardmatch\css\css3flip.css" />
     <Content Include="cardmatch\css\transições.css" />
     <Content Include="cardmatch\imagens\AK.png" />
     <Content Include="cardmatch\imagens\AQ.png" />
