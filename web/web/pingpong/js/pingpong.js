@@ -49,7 +49,7 @@
         var bolaX = bola.x + bola.velocidade * bola.direcaoX;
         var bolaY = bola.y + bola.velocidade * bola.direcaoY;
 
-        if (bolaX >= pingpong.esteiraA.x && bola <= pingpong.esteiraA.x + pingpong.esteiraA.largura)
+        if (bolaX >= pingpong.esteiraA.x && bolaX <= pingpong.esteiraA.x + pingpong.esteiraA.largura)
         {
             if( bolaY >= pingpong.esteiraA.y && bolaY <= pingpong.esteiraA.y + pingpong.esteiraA.altura)
             {
@@ -57,8 +57,8 @@
             }
         }
 
-
-        if (bolaX >= pingpong.esteiraB.x && bolaX < pingpong.esteiraB.x + pingpong.esteiraB.largura)
+        
+        if (bolaX >= pingpong.esteiraB.x && bolaX <= pingpong.esteiraB.x + pingpong.esteiraB.largura)
         {
             if( bolaY >= pingpong.esteiraB.y && bolaY <= pingpong.esteiraB.y + pingpong.esteiraB.altura )
             {
@@ -125,6 +125,9 @@
         pingpong.bola.x = 250;
         pingpong.bola.y = 100;
         pingpong.bola.direcaoX = -1;
+
+        pingpong.pontuacaoA++;
+        $("#score-a").text(pingpong.pontuacaoA);
     }
 
 
@@ -133,6 +136,8 @@
         pingpong.bola.x = 150;
         pingpong.bola.y = 100;
         pingpong.bola.direcaoX = 1;
+        pingpong.pontuacaoB++;
+        $("#score-b").text(pingpong.pontuacaoB);
     }
 
 
