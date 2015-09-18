@@ -70,8 +70,8 @@
     <Content Include="pingpong\img\football-player-left.png" />
     <Content Include="pingpong\img\football-player.png" />
     <Content Include="pingpong\img\playground.png" />
-    <Content Include="pingpong\index.html" />
     <Content Include="pingpong\css\pingpong.css" />
+    <Content Include="pingpong\index.html" />
     <Content Include="pingpong\js\pingpong.js" />
     <Content Include="packages.config" />
     <None Include="pingpong\js\jquery-2.1.4.intellisense.js" />
