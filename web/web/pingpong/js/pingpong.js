@@ -2,6 +2,9 @@
 
     var pingpong = {
 
+        pontuacaoA: 0,
+        pontuacaoB: 0,
+
         esteiraA: {
             x: 50,
             y: 100,
@@ -34,6 +37,7 @@
 
     function loopJogo()
     {
+        moverEsteiraAAutomaticamente();
         moverBola();
     }
 
@@ -54,6 +58,14 @@
         }
 
 
+        if (bolaX >= pingpong.esteiraB.x && bolaX < pingpong.esteiraB.x + pingpong.esteiraB.largura)
+        {
+            if( bolaY >= pingpong.esteiraB.y && bolaY <= pingpong.esteiraB.y + pingpong.esteiraB.altura )
+            {
+                bola.direcaoX = -1;
+            }
+        }
+
         if (bolaAtingiuTopoOuRodape())
             bola.direcaoY *= -1;
 
@@ -65,6 +77,21 @@
 
         bola.x += bola.direcaoX * bola.velocidade;
         bola.y += bola.direcaoY * bola.velocidade;
+    }
+
+
+    function moverEsteiraAAutomaticamente()
+    {
+        var velocidade = 4;
+        var direcao = 1;
+
+        var esteiraY = pingpong.esteiraA.y + pingpong.esteiraA.altura / 2;
+
+        if (esteiraY > pingpong.bola.y)
+            direcao = -1;
+
+        pingpong.esteiraA.y += velocidade * direcao;
+
     }
 
     function bolaAtingiuTopoOuRodape()
