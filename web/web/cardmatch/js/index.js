@@ -11,7 +11,7 @@
 
     angulo = 0;
     setInterval(function () {
-        angulo++;
+        angulo+=10;
 
         
 
