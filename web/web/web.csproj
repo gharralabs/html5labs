@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="box.html" />
     <Content Include="cardmatch\css\css3flip.css" />
+    <Content Include="cardmatch\css\matchgame.css" />
     <Content Include="cardmatch\css\transições.css" />
     <Content Include="cardmatch\imagens\AK.png" />
     <Content Include="cardmatch\imagens\AQ.png" />
@@ -83,11 +84,11 @@
     <Content Include="pingpong\index.html" />
     <Content Include="pingpong\js\pingpong.js" />
     <Content Include="packages.config" />
-    <None Include="pingpong\js\jquery-2.1.4.intellisense.js" />
-    <Content Include="pingpong\js\jquery-2.1.4.js" />
-    <Content Include="pingpong\js\jquery-2.1.4.min.js" />
+    <None Include="js\jquery-2.1.4.intellisense.js" />
+    <Content Include="js\jquery-2.1.4.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="Web.config" />
-    <Content Include="pingpong\js\jquery-2.1.4.min.map" />
+    <Content Include="js\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,21 +1,81 @@
-﻿$().ready(function () {
+﻿var matchingGame = {};
+matchingGame.deck = [
+    'cardAK', 'cardAK',
+    'cardAQ', 'cardAQ',
+    'cardAJ', 'cardAJ',
+    'cardBK', 'cardBK',
+    'cardBQ', 'cardBQ',
+    'cardBJ', 'cardBJ'
+];
+
+$().ready(function () {
     
+
+    matchingGame.deck.sort(shuffle);
+
+
+    for (var i = 0; i < 11; i++)
+    {
+        $(".card:first-child").clone()
+                              .appendTo("#cards");
+    }
 
     $("#cards").children()
                .each(function (index) {
-                   $(this).click(function () {
-                       $(this).toggleClass("card-flipped");
-                   });
-               });
+                        var x = ($(this).width() + 20) * (index % 4);
+                        var y = ($(this).height() + 20) * Math.floor(index / 4);
+                        $(this).css("transform", "translateX(" + x + "px) translateY(" + y + "px)");
+
+                        var pattern = matchingGame.deck.pop();
+                        $(this).find(".back").addClass(pattern);
+                        $(this).attr("data-pattern", pattern);
+                        $(this).click(selectCard);
+    });
 
 
-    angulo = 0;
-    setInterval(function () {
-        angulo+=10;
-
-        
-
-        $("#teste").css('transform', 'rotateY(' + angulo + 'deg)');
-    }, 1000);
     
+
 });
+
+function shuffle()
+{
+    return 0.5 - Math.random();
+}
+
+
+function selectCard() {
+
+    if( $(".card-flipped").size() > 1 )
+        return;
+
+    $(this).addClass("card-flipped");
+
+    if ($(".card-flipped").size() === 2)
+        setTimeout(checkPattern, 700);
+    
+}
+
+
+function checkPattern() {
+    if(isMatchPattern())
+    {
+        $(".card-flipped").removeClass("card-flipped")
+                          .addClass("card-removed");
+
+        $(".card-removed").bind("transitionend", removeTookCards);
+    }
+    else {
+        $(".card-flipped").removeClass("card-flipped");
+    }
+}
+
+function isMatchPattern() {
+    var cards = $(".card-flipped");
+    var pattern = $(cards[0]).data("pattern");
+    var anotherPattern = $(cards[1]).data("pattern");
+    return pattern === anotherPattern;
+}
+
+function removeTookCards() {
+    $(".card-removed").remove();
+}
