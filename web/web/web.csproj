@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
+    <Content Include="untangle\untangle.css" />
+    <Content Include="untangle\untangle.drawing.js" />
+    <Content Include="untangle\untangle.data.js" />
+    <Content Include="untangle\untangle.input.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -87,13 +92,17 @@
     <None Include="js\jquery-2.1.4.intellisense.js" />
     <Content Include="js\jquery-2.1.4.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="untangle\index.html" />
+    <Content Include="untangle\untangle.js" />
     <Content Include="Web.config" />
     <Content Include="js\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="untangle\images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
